@@ -8,7 +8,7 @@ navbar:
     - text: "Tutorial"
       href: vignette.html
     - text: "SCE object"
-      href: SCEConstruction.html
+      href: SCEconstruction.html
 output:
   html_document:
     theme: spacelab  ##cosmo
