@@ -307,9 +307,6 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Overview</a>
-</li>
-<li>
   <a href="vignette.html">Tutorial</a>
 </li>
 <li>
@@ -334,12 +331,15 @@ div.tocify {
 
 <p>This vignette provide a quick-start guide using data from <span class="citation">Zeisel et al. (2015)</span> to illustrate the functionalities of the shiny application <a href="https://shiny-app-nec-okd46-2-shiny-nec.apps.math.cnrs.fr">ASTEC-sc</a>.<br />
 You may download the SCE object to test the application here : <a href="SCE-ZeiselBrain-example.RData">SCE-ZeiselBrain-example.RData</a></p>
+<p>In the sequel, each section corresponds to a tab of the ASTEC-sc application.</p>
 <div id="upload-data" class="section level1">
 <h1>Upload data</h1>
 <p>Upload data tab is a required way to use the app. For now, to use this application, you have to upload a SingleCellExperiment (SCE) object. This object has to be saved in a Rdata file. You can upload data and, when upload step is complete, a summary of the elements available in the SCE object is given.</p>
 <p><img align="center" src="Pictures/UploadInput.png"></p>
 <!--![](Pictures/UploadInput.png)-->
-<p>This object must have a specific structure. You may refer to this <a href="SCEconstruction.html">vignette</a> to see how build a SCE object.</p>
+
+<p>This object must have a specific structure. You may refer to the tab <a href="SCEconstruction.html">SCE object</a> to see how build a SCE object.</p>
+
 <p>Please follow these recommendations for building your SCE object:</p>
 <ul>
 <li><code>sce@assays</code> contains the different types of data (raw counts (counts), normalized counts (normcounts), log-normalized counts (logcounts), …). By default: ‘counts’, ‘logcounts’ and ‘normcounts’ are required. The rows correspond to features (e.g. genes), the columns to cells.</li>
@@ -380,8 +380,8 @@ You may download the SCE object to test the application here : <a href="SCE-Zeis
 <p><img src="Pictures/DescriptiveOutput3.png" /></p>
 <p>A “Download Plot” button is available in this tab. If you click on, you can download all these plots in only a unique one png image.</p>
 </div>
-<div id="visualization-of-data" class="section level1">
-<h1>Visualization of data</h1>
+<div id="data-visualization" class="section level1">
+<h1>Data visualization</h1>
 <p>This tab allows to visualize cells in a low-dimensional space based on the dimensionality reduction methods available in the SCE object.</p>
 <p><img src="Pictures/Visualization1.png" /></p>
 <p>For a great visualization, you can play with the three inputs on this tab.</p>

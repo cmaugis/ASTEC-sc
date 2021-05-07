@@ -1,1 +1,0 @@
-# ASTEC-sc
