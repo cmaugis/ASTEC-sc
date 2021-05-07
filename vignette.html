@@ -337,7 +337,9 @@ You may download the SCE object to test the application here : <a href="SCE-Zeis
 <p>Upload data tab is a required way to use the app. For now, to use this application, you have to upload a SingleCellExperiment (SCE) object. This object has to be saved in a Rdata file. You can upload data and, when upload step is complete, a summary of the elements available in the SCE object is given.</p>
 <p><img align="center" src="Pictures/UploadInput.png"></p>
 <!--![](Pictures/UploadInput.png)-->
+
 <p>This object must have a specific structure. You may refer to the tab <a href="SCEconstruction.html">SCE object</a> to see how build a SCE object.</p>
+
 <p>Please follow these recommendations for building your SCE object:</p>
 <ul>
 <li><code>sce@assays</code> contains the different types of data (raw counts (counts), normalized counts (normcounts), log-normalized counts (logcounts), …). By default: ‘counts’, ‘logcounts’ and ‘normcounts’ are required. The rows correspond to features (e.g. genes), the columns to cells.</li>

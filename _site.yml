@@ -1,0 +1,19 @@
+name: "ASTEC-sce"
+navbar:
+  title: "ASTEC-sc"
+  type: inverse
+  left:
+    - text: "Overview"
+      href: index.html
+    - text: "Tutorial"
+      href: vignette.html
+    - text: "SCE object"
+      href: SCEconstruction.html
+output:
+  html_document:
+    theme: spacelab  ##cosmo
+    highlight: tango  ##textmate
+    toc: TRUE
+    toc_depth: 1
+    number_sections: true
+    css: style.css
