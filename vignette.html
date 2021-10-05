@@ -284,12 +284,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -329,7 +329,7 @@ div.tocify {
 </div>
 
 
-<p>This vignette provide a quick-start guide using data from <span class="citation">Zeisel et al. (2015)</span> to illustrate the functionalities of the shiny application <a href="https://shiny-app-nec-okd46-2-shiny-nec.apps.math.cnrs.fr">ASTEC-sc</a>.<br />
+<p>This vignette provide a quick-start guide using data from <span class="citation">Zeisel et al. (2015)</span> to illustrate the functionalities of the shiny application <a href="https://shiny-app-astec--sc.apps.math.cnrs.fr/">ASTEC-sc</a>.<br />
 You may download the SCE object to test the application here : <a href="SCE-ZeiselBrain-example.RData">SCE-ZeiselBrain-example.RData</a></p>
 <p>In the sequel, each section corresponds to a tab of the ASTEC-sc application.</p>
 <div id="upload-data" class="section level1">
@@ -337,9 +337,7 @@ You may download the SCE object to test the application here : <a href="SCE-Zeis
 <p>Upload data tab is a required way to use the app. For now, to use this application, you have to upload a SingleCellExperiment (SCE) object. This object has to be saved in a Rdata file. You can upload data and, when upload step is complete, a summary of the elements available in the SCE object is given.</p>
 <p><img align="center" src="Pictures/UploadInput.png"></p>
 <!--![](Pictures/UploadInput.png)-->
-
 <p>This object must have a specific structure. You may refer to the tab <a href="SCEconstruction.html">SCE object</a> to see how build a SCE object.</p>
-
 <p>Please follow these recommendations for building your SCE object:</p>
 <ul>
 <li><code>sce@assays</code> contains the different types of data (raw counts (counts), normalized counts (normcounts), log-normalized counts (logcounts), …). By default: ‘counts’, ‘logcounts’ and ‘normcounts’ are required. The rows correspond to features (e.g. genes), the columns to cells.</li>
@@ -411,10 +409,10 @@ The second input, called “The other cell clusterings” depends on the first i
 <p><img src="Pictures/ComparisonARI.png" /></p>
 <p>You may download this plot in a png image with the “Download Plot” button.</p>
 </div>
-<div id="circusplot-sub-tab" class="section level2">
-<h2>CircusPlot sub-tab</h2>
-<p><img src="Pictures/ComparisonCircusPlot.png" /></p>
-<p>In the circus plot, choosing a main clustering makes sense. Indeed, this plot shows how many cells per cluster (from the main clustering) there are from other clusters (from other clusterings selected in the specific input). You may download this plot in a png image with the “Download Plot” button.</p>
+<div id="circosplot-sub-tab" class="section level2">
+<h2>CircosPlot sub-tab</h2>
+<p><img src="Pictures/ComparisonCircosPlot.png" /></p>
+<p>In the circos plot, choosing a main clustering makes sense. Indeed, this plot shows how many cells per cluster (from the main clustering) there are from other clusters (from other clusterings selected in the specific input). You may download this plot in a png image with the “Download Plot” button.</p>
 </div>
 </div>
 <div id="chosen-cell-clustering" class="section level1">
@@ -532,6 +530,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
